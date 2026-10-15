@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 /**
  * Envía las visitas sin idioma en la URL (p. ej. latina768.com/) a /es.
- * En la Fase 4 se puede elegir el idioma según el navegador del visitante.
+ * El español es el idioma principal; el visitante cambia a inglés con el selector ES / EN.
  */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

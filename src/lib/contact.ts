@@ -4,7 +4,7 @@
  * (que es la validación que realmente cuenta).
  */
 
-export const SERVICE_IDS = ["ia", "automatizacion", "web", "otro"] as const;
+export const SERVICE_IDS = ["estrategia", "automatizacion", "ia", "web", "otro"] as const;
 export type ServiceId = (typeof SERVICE_IDS)[number];
 
 export type ContactInput = {

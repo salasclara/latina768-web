@@ -22,9 +22,10 @@ import {
  */
 
 const SERVICE_LABELS: Record<string, string> = {
-  ia: "Inteligencia artificial para negocios",
-  automatizacion: "Automatización de procesos",
-  web: "Desarrollo web y soluciones digitales",
+  estrategia: "Estrategias digitales",
+  automatizacion: "Automatización comercial",
+  ia: "Integración de herramientas de IA",
+  web: "Desarrollo web",
   otro: "Aún no lo sabe",
 };
 

@@ -2,10 +2,10 @@ import { getDictionary, getLocale } from "@/lib/i18n";
 import { Icon, type IconName } from "./Icon";
 
 const flowStyles: { icon: IconName; box: string; color: string; line: string }[] = [
-  { icon: "message", box: "bg-cyan/10 border border-cyan/35", color: "text-cyan", line: "from-cyan to-electric" },
-  { icon: "sparkles", box: "bg-electric/15 border border-electric/45", color: "text-blue-soft", line: "from-electric to-indigo" },
-  { icon: "userPlus", box: "bg-indigo/15 border border-indigo/45", color: "text-[#8e86ff]", line: "from-indigo to-violet" },
-  { icon: "bell", box: "bg-brand", color: "text-ink", line: "" },
+  { icon: "target", box: "bg-cyan/10 border border-cyan/35", color: "text-cyan", line: "from-cyan to-electric" },
+  { icon: "code", box: "bg-electric/15 border border-electric/45", color: "text-blue-soft", line: "from-electric to-indigo" },
+  { icon: "flow", box: "bg-indigo/15 border border-indigo/45", color: "text-[#8e86ff]", line: "from-indigo to-violet" },
+  { icon: "sparkles", box: "bg-brand", color: "text-ink", line: "" },
 ];
 
 export async function Hero() {
@@ -40,7 +40,7 @@ export async function Hero() {
                 {h.primaryCta}
               </a>
               <a
-                href={`${home}#soluciones`}
+                href={`${home}#servicios`}
                 className="inline-flex min-h-[54px] items-center rounded-xl border-[1.5px] border-[#3a4c80] px-7 text-base font-bold text-ink transition hover:border-cyan"
               >
                 {h.secondaryCta}

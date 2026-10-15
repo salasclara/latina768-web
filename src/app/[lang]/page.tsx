@@ -7,8 +7,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Solutions />
       <Services />
+      <Solutions />
       <Process />
       <Audience />
       <Projects />

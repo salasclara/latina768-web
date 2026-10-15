@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
-import { termsEs } from "@/content/legal-es";
+import { getLegalDoc } from "@/content/legal";
+import { getLocale } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
-// Fase 4: elegir el documento según el idioma (termsEn).
-const doc = termsEs;
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const doc = getLegalDoc("terms", locale);
+  return {
+    title: doc.title,
+    description: doc.description,
+    alternates: {
+      canonical: `/${locale}/terminos`,
+      languages: Object.fromEntries(site.locales.map((l) => [l, `/${l}/terminos`])),
+    },
+  };
+}
 
-export const metadata: Metadata = {
-  title: doc.title,
-  description: doc.description,
-  alternates: { canonical: "/es/terminos" },
-};
-
-export default function TermsPage() {
-  return <LegalPage doc={doc} />;
+export default async function TermsPage() {
+  return <LegalPage doc={getLegalDoc("terms", await getLocale())} />;
 }

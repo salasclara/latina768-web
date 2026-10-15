@@ -9,13 +9,9 @@ export const site = {
   phone: "(469) 322-9074",
   phoneHref: "tel:+14693229074",
   email: "contacto@latina768.com",
-  location: "Texas, Estados Unidos",
 
-  /**
-   * Idiomas publicados. El inglés se activa en la Fase 4,
-   * cuando exista su diccionario (src/dictionaries/en.ts).
-   */
-  locales: ["es"] as const,
+  /** Idiomas publicados. El primero es el principal. */
+  locales: ["es", "en"] as const,
   defaultLocale: "es" as const,
 
   /**

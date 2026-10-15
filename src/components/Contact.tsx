@@ -12,7 +12,7 @@ export async function Contact() {
   const items: { icon: IconName; label: string; href?: string; box: string; color: string; srLabel?: string }[] = [
     { icon: "phone", label: site.phone, href: site.phoneHref, box: "bg-cyan/10 border-cyan/35", color: "text-cyan", srLabel: t.phoneLabel },
     { icon: "mail", label: site.email, href: `mailto:${site.email}`, box: "bg-electric/12 border-electric/45", color: "text-blue-soft", srLabel: t.emailLabel },
-    { icon: "pin", label: site.location, box: "bg-violet/13 border-violet/45", color: "text-violet-soft" },
+    { icon: "pin", label: t.location, box: "bg-violet/13 border-violet/45", color: "text-violet-soft" },
   ];
 
   return (

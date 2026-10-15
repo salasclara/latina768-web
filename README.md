@@ -14,9 +14,9 @@ npm run build      # compilación de producción
 
 | Qué | Archivo |
 | --- | --- |
-| Teléfono, correo, dominio, idiomas publicados, mostrar/ocultar Proyectos | `src/lib/site.ts` |
-| Todos los textos del sitio (español) | `src/dictionaries/es.ts` |
-| Textos legales (borradores) | `src/content/legal-es.ts` |
+| Teléfono, correo, dominio, idiomas, mostrar/ocultar Proyectos | `src/lib/site.ts` |
+| Textos del sitio | `src/dictionaries/es.ts` · `src/dictionaries/en.ts` |
+| Textos legales (borradores) | `src/content/legal-es.ts` · `legal-en.ts` |
 | Proyectos y demostraciones | `src/lib/projects.ts` |
 | Colores y degradados de la marca | `src/app/globals.css` (`@theme`) |
 | Logotipo | `src/assets/logo-horizontal.png` · íconos en `src/app/icon.png` y `apple-icon.png` |
@@ -36,11 +36,9 @@ con el teléfono y el correo. Nunca simula un envío exitoso.
 
 ## Idiomas
 
-Rutas `/es/…` (y `/en/…` desde la Fase 4). Para activar inglés:
-1. Crear `src/dictionaries/en.ts` con la misma estructura que `es.ts`.
-2. Registrarlo en `src/lib/i18n.ts`.
-3. Agregar `"en"` a `locales` en `src/lib/site.ts` (aparece el selector ES / EN).
-4. Agregar las versiones en inglés de los textos legales.
+Rutas `/es/…` (principal) y `/en/…`, con selector ES / EN en el encabezado.
+Textos en `src/dictionaries/es.ts` y `en.ts` (misma estructura; TypeScript avisa si
+falta una clave). Legales en `src/content/legal-es.ts` y `legal-en.ts`.
 
 ## SEO
 

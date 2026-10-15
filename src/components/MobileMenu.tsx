@@ -41,7 +41,7 @@ export function MobileMenu({
       {open && (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-full border-b border-line bg-night/97 px-5 pb-6 pt-2 backdrop-blur"
+          className="absolute inset-x-0 top-full border-b border-line bg-night px-5 pb-6 pt-2 shadow-[0_24px_48px_-12px_rgba(0,0,0,0.8)]"
         >
           <nav className="flex flex-col">
             {links.map((l) => (

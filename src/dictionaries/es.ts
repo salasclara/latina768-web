@@ -1,12 +1,12 @@
 /**
  * Textos del sitio en español (idioma principal).
- * El diccionario en inglés (Fase 4) debe seguir exactamente esta misma estructura.
+ * El diccionario en inglés (en.ts) sigue exactamente esta misma estructura.
  */
 const es = {
   meta: {
-    title: "Latina 768 Services | IA y automatización para pequeñas empresas",
+    title: "Latina 768 Services | Consultoría de marketing, IA y automatización",
     description:
-      "Inteligencia artificial, automatización y soluciones digitales diseñadas para pequeñas empresas. Menos tareas manuales, más tiempo para hacer crecer tu negocio.",
+      "Consultoría de marketing, inteligencia artificial, automatización comercial y desarrollo web para pequeñas empresas que quieren crecer.",
   },
 
   nav: {
@@ -17,7 +17,7 @@ const es = {
     projects: "Proyectos",
     about: "Nosotros",
     contact: "Contacto",
-    cta: "Solicitar una consulta",
+    cta: "Solicitar asesoría",
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
     language: "Idioma",
@@ -26,35 +26,38 @@ const es = {
   },
 
   hero: {
-    badge: "IA y automatización para pequeñas empresas",
-    titleLead: "Menos tareas manuales.",
-    titleAccent: "Más tiempo para hacer crecer tu negocio.",
+    badge: "Consultoría de marketing con inteligencia artificial",
+    titleLead: "Impulsamos tu negocio con",
+    titleAccent: "estrategia, tecnología e innovación.",
     subtitle:
-      "Inteligencia artificial, automatización y soluciones digitales diseñadas para pequeñas empresas.",
-    primaryCta: "Solicitar una consulta",
-    secondaryCta: "Explorar soluciones",
+      "Consultoría de marketing, inteligencia artificial, automatización comercial y desarrollo web para pequeñas empresas que quieren crecer.",
+    primaryCta: "Solicitar asesoría",
+    secondaryCta: "Conocer nuestros servicios",
     highlights: [
       "Atención en español e inglés",
       "Sin necesidad de un equipo técnico",
       "Empresa de Texas",
     ],
     flow: {
-      title: "Una consulta nueva, de principio a fin",
-      tag: "Automático",
-      caption: "Ejemplo ilustrativo de una automatización",
+      title: "Un sistema completo para crecer",
+      tag: "4 áreas",
+      caption: "Así se conectan nuestros servicios",
       steps: [
-        { title: "Llega una consulta", text: "Desde tu web o WhatsApp · 9:42 p. m." },
         {
-          title: "Respuesta inmediata",
-          text: "El asistente responde preguntas frecuentes y pide los datos clave.",
+          title: "Estrategia digital",
+          text: "Definimos qué comunicar, a quién y en qué canales.",
         },
         {
-          title: "Contacto organizado",
-          text: "Se guarda con su nombre, teléfono y el servicio que necesita.",
+          title: "Presencia web",
+          text: "Una web clara que explica tu oferta y recibe solicitudes.",
         },
         {
-          title: "Tu equipo recibe el aviso",
-          text: "A la mañana siguiente, todo listo para dar seguimiento.",
+          title: "Seguimiento automatizado",
+          text: "Cada prospecto queda registrado y recibe seguimiento.",
+        },
+        {
+          title: "Atención con IA",
+          text: "Respuestas ágiles a preguntas frecuentes, también fuera de horario.",
         },
       ],
     },
@@ -95,39 +98,49 @@ const es = {
 
   services: {
     eyebrow: "Servicios",
-    title: "Tres áreas, una solución completa",
+    title: "Cuatro áreas que trabajan juntas",
     intro:
-      "La tecnología apoya a tu equipo; no lo reemplaza. Te ayudamos a decidir qué automatizar y qué mantener en manos de personas.",
+      "La estrategia define el rumbo; la tecnología ayuda a ejecutarlo. Combinamos ambas según lo que tu negocio necesita.",
     cta: "Hablemos de este servicio",
     items: [
       {
-        id: "ia",
-        title: "Inteligencia artificial para negocios",
-        text: "Asistentes que responden preguntas frecuentes, orientan a tus clientes y apoyan a tu equipo en tareas del día a día.",
+        id: "estrategia",
+        title: "Estrategias digitales",
+        text: "Consultoría y planificación de marketing para fortalecer tu presencia digital, mejorar tu comunicación comercial e identificar oportunidades de crecimiento.",
         benefits: [
-          "Atención más rápida, también fuera de horario",
-          "Respuestas consistentes en español e inglés",
-          "Tu equipo se enfoca en lo que requiere criterio humano",
+          "Un plan claro de qué comunicar y dónde",
+          "Mensajes comerciales más consistentes",
+          "Oportunidades de crecimiento identificadas",
         ],
       },
       {
         id: "automatizacion",
-        title: "Automatización de procesos",
-        text: "Conectamos formularios, organizamos prospectos y creamos avisos para que el seguimiento no dependa de la memoria.",
+        title: "Automatización comercial",
+        text: "Soluciones para optimizar la captación, la atención y el seguimiento de clientes, con menos tareas repetitivas y más organización.",
         benefits: [
+          "Prospectos y clientes organizados",
+          "Seguimiento que no depende de la memoria",
           "Menos tiempo en tareas repetitivas",
-          "Contactos y solicitudes siempre organizados",
-          "Continuidad aunque cambie el día o el equipo",
+        ],
+      },
+      {
+        id: "ia",
+        title: "Integración de herramientas de IA",
+        text: "Incorporamos herramientas de inteligencia artificial para apoyar la atención al cliente, optimizar procesos y mejorar la productividad.",
+        benefits: [
+          "Atención más ágil, también fuera de horario",
+          "Herramientas elegidas para tu caso",
+          "Tu equipo se enfoca en lo que requiere criterio humano",
         ],
       },
       {
         id: "web",
-        title: "Desarrollo web y soluciones digitales",
-        text: "Páginas web, landing pages, formularios y herramientas digitales conectadas a tus procesos, no solo una vitrina.",
+        title: "Desarrollo web",
+        text: "Diseño y desarrollo de páginas web corporativas, landing pages y soluciones digitales adaptadas a las necesidades comerciales de tu negocio.",
         benefits: [
-          "Una web que explica y recibe solicitudes",
-          "Formularios conectados a tu seguimiento",
-          "Herramientas adaptadas a tu forma de trabajar",
+          "Una web que explica lo que haces",
+          "Páginas pensadas para recibir solicitudes",
+          "Diseño adaptado a celulares",
         ],
       },
     ],
@@ -138,28 +151,28 @@ const es = {
     title: "Un proceso claro, de la primera conversación en adelante",
     steps: [
       {
-        title: "Escuchamos",
-        text: "Conocemos tu negocio, cómo trabajas hoy y qué te quita más tiempo.",
+        title: "Analizamos",
+        text: "Analizamos las necesidades y los objetivos de tu negocio.",
       },
       {
-        title: "Identificamos oportunidades",
-        text: "Señalamos qué conviene automatizar primero y qué no hace falta tocar.",
+        title: "Diseñamos la estrategia",
+        text: "Diseñamos una estrategia digital adaptada a tus necesidades.",
       },
       {
-        title: "Diseñamos e implementamos",
-        text: "Construimos la solución con las herramientas adecuadas para tu caso.",
+        title: "Implementamos",
+        text: "Implementamos las herramientas y soluciones acordadas.",
       },
       {
-        title: "Acompañamos",
-        text: "Te apoyamos en su uso y su evolución, según el servicio contratado.",
+        title: "Evaluamos y mejoramos",
+        text: "Evaluamos resultados e identificamos oportunidades de mejora.",
       },
     ],
   },
 
   audience: {
     eyebrow: "Para quién",
-    title: "Pensado para negocios de servicios",
-    text: "Si recibes consultas, preparas cotizaciones o agendas citas, seguramente hay tareas que pueden funcionar solas.",
+    title: "Pensado para pequeñas empresas y emprendedores",
+    text: "Negocios que quieren comunicar mejor, atraer más clientes y organizar su operación, sin tener un departamento de marketing o de tecnología propio.",
     sectors: [
       "Limpieza",
       "Mantenimiento",
@@ -184,14 +197,14 @@ const es = {
 
   about: {
     eyebrow: "Nosotros",
-    title: "Tecnología moderna, al alcance de las pequeñas empresas",
-    text: "Latina 768 Services es una empresa de Texas que ayuda a pequeñas empresas a usar inteligencia artificial y automatización de forma práctica. Explicamos en palabras simples, trabajamos contigo en español o en inglés y construimos soluciones a la medida de tu negocio.",
+    title: "Estrategia y tecnología al servicio de tu negocio.",
+    text: "En Latina 768 Services creemos que las pequeñas empresas también deben tener acceso a herramientas digitales innovadoras. Combinamos consultoría de marketing, automatización e inteligencia artificial para ayudar a los negocios a fortalecer su presencia digital, simplificar procesos y aprovechar nuevas oportunidades.",
     missionTitle: "Misión",
     mission:
-      "Facilitar que las pequeñas empresas usen inteligencia artificial y automatización de forma práctica, segura y a su medida.",
+      "Ayudar a pequeñas empresas y emprendedores a crecer combinando consultoría de marketing con herramientas digitales, automatización e inteligencia artificial.",
     visionTitle: "Visión",
     vision:
-      "Ser el socio tecnológico de confianza para pequeñas empresas que quieren crecer sin un departamento de tecnología.",
+      "Ser el aliado estratégico y tecnológico de confianza para pequeñas empresas que quieren crecer sin un departamento de marketing o de tecnología propio.",
     valuesTitle: "Valores",
     values: ["Claridad", "Integridad", "Cercanía", "Innovación práctica", "Compromiso"],
   },
@@ -202,6 +215,7 @@ const es = {
     text: "Cuéntanos cómo trabajas hoy y te diremos qué se puede simplificar.",
     phoneLabel: "Llamar",
     emailLabel: "Escribir un correo",
+    location: "Texas, Estados Unidos",
     form: {
       name: "Nombre",
       namePlaceholder: "Tu nombre",
@@ -215,9 +229,10 @@ const es = {
       service: "Servicio de interés",
       servicePlaceholder: "Selecciona una opción",
       serviceOptions: {
-        ia: "Inteligencia artificial para negocios",
-        automatizacion: "Automatización de procesos",
-        web: "Desarrollo web y soluciones digitales",
+        estrategia: "Estrategias digitales",
+        automatizacion: "Automatización comercial",
+        ia: "Integración de herramientas de IA",
+        web: "Desarrollo web",
         otro: "Aún no lo sé",
       },
       message: "Mensaje",

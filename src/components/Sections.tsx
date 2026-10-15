@@ -35,7 +35,7 @@ export async function Solutions() {
 
 /* ----------------------------------------------------------------- Servicios */
 
-const serviceIcons: IconName[] = ["sparkles", "flow", "code"];
+const serviceIcons: IconName[] = ["target", "flow", "sparkles", "code"];
 
 export async function Services() {
   const t = (await getDictionary()).services;
@@ -52,20 +52,20 @@ export async function Services() {
           <p className="max-w-[430px] text-[17px] leading-relaxed text-muted">{t.intro}</p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {t.items.map((s, i) => {
             const a = accents[i % accents.length];
             return (
               <article
                 key={s.id}
-                className="relative flex flex-col gap-4.5 overflow-hidden rounded-[22px] border border-line bg-card p-7 sm:p-8"
+                className="relative flex flex-col gap-4.5 overflow-hidden rounded-[22px] border border-line bg-card p-7"
               >
                 <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r ${a.bar}`} />
                 <span className={`flex h-[54px] w-[54px] items-center justify-center rounded-[14px] border ${a.soft} ${a.text}`}>
                   <Icon name={serviceIcons[i]} size={26} strokeWidth={1.9} />
                 </span>
-                <h3 className="font-display text-[21px] font-bold tracking-[-0.015em]">{s.title}</h3>
-                <p className="text-base leading-relaxed text-subtle">{s.text}</p>
+                <h3 className="font-display text-[20px] font-bold leading-snug tracking-[-0.015em]">{s.title}</h3>
+                <p className="text-[15px] leading-relaxed text-subtle">{s.text}</p>
                 <ul className="flex flex-col gap-2.5 text-[15px] font-semibold text-[#e6ebf7]">
                   {s.benefits.map((b) => (
                     <li key={b} className="flex gap-2.5">

@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
     applicationName: site.name,
     alternates: {
       canonical: `/${locale}`,
-      languages: Object.fromEntries(site.locales.map((l) => [l, `/${l}`])),
+      languages: { ...Object.fromEntries(site.locales.map((l) => [l, `/${l}`])), "x-default": `/${site.defaultLocale}` },
     },
     openGraph: {
       type: "website",

@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
-import { privacyEs } from "@/content/legal-es";
+import { getLegalDoc } from "@/content/legal";
+import { getLocale } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
-// Fase 4: elegir el documento según el idioma (privacyEn).
-const doc = privacyEs;
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const doc = getLegalDoc("privacy", locale);
+  return {
+    title: doc.title,
+    description: doc.description,
+    alternates: {
+      canonical: `/${locale}/privacidad`,
+      languages: Object.fromEntries(site.locales.map((l) => [l, `/${l}/privacidad`])),
+    },
+  };
+}
 
-export const metadata: Metadata = {
-  title: doc.title,
-  description: doc.description,
-  alternates: { canonical: "/es/privacidad" },
-};
-
-export default function PrivacyPage() {
-  return <LegalPage doc={doc} />;
+export default async function PrivacyPage() {
+  return <LegalPage doc={getLegalDoc("privacy", await getLocale())} />;
 }

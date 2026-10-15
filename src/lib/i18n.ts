@@ -5,7 +5,7 @@ import { isLocale, type Locale } from "@/lib/site";
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   es: () => import("@/dictionaries/es").then((m) => m.default),
-  // en: () => import("@/dictionaries/en").then((m) => m.default),  ← Fase 4
+  en: () => import("@/dictionaries/en").then((m) => m.default),
 };
 
 /** Idioma de la ruta actual (/es, /en). */
