@@ -12,7 +12,8 @@ export function proxy(request: NextRequest) {
 
   const url = request.nextUrl.clone();
   url.pathname = `/${site.defaultLocale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(url);
+  // 308 = permanente: Google entiende que /es es la página principal definitiva.
+  return NextResponse.redirect(url, 308);
 }
 
 export const config = {
