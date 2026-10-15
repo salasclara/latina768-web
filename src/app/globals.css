@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Paleta Latina 768 */
+  --color-night: #01030b; /* fondo base (mismo tono del logotipo) */
+  --color-navy: #060b1e; /* secciones alternas */
+  --color-panel: #070d24; /* paneles destacados */
+  --color-card: #0b1330; /* tarjetas */
+  --color-chip: #111b40;
+  --color-line: #1a2650;
+  --color-line-strong: #2a3a6a;
+  --color-cyan: #19d4f0; /* turquesa luminoso */
+  --color-cyan-soft: #8beaf7;
+  --color-link: #5be1f5;
+  --color-electric: #2f6bff; /* azul eléctrico */
+  --color-blue: #2563eb;
+  --color-blue-soft: #6b9bff;
+  --color-indigo: #5b4bf0;
+  --color-violet: #7c3aed; /* violeta */
+  --color-violet-soft: #a57bff;
+  --color-ink: #ffffff;
+  --color-muted: #b4c0db;
+  --color-subtle: #a3b0cf;
+  --color-faint: #8796ba;
+
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    background: var(--color-night);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: rgb(47 107 255 / 0.45);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #6f7fa3;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Degradado completo de la marca para textos destacados */
+  .text-gradient {
+    background: linear-gradient(90deg, #19d4f0 0%, #2f6bff 55%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Botón principal: azul → violeta (texto blanco con buen contraste) */
+  .bg-brand {
+    background: linear-gradient(90deg, #2563eb 0%, #6d3aed 100%);
+  }
+  .bg-brand-line {
+    background: linear-gradient(90deg, #19d4f0, #2f6bff, #8b5cf6);
+  }
+  .border-gradient {
+    background: linear-gradient(
+      135deg,
+      rgb(25 212 240 / 0.7),
+      rgb(47 107 255 / 0.35) 45%,
+      rgb(124 58 237 / 0.7)
+    );
+  }
+  .bg-glow {
+    background:
+      radial-gradient(60% 55% at 78% 40%, rgb(47 107 255 / 0.2), transparent 70%),
+      radial-gradient(40% 40% at 95% 75%, rgb(124 58 237 / 0.16), transparent 70%),
+      var(--color-night);
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(rgb(120 150 220 / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(120 150 220 / 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
 }

@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Latina 768 Services — sitio web corporativo
 
-## Getting Started
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4. Pensado para publicarse en Vercel.
 
-First, run the development server:
+## Trabajar en local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000 → redirige a /es
+npm run build      # compilación de producción
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dónde se cambia cada cosa
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Qué | Archivo |
+| --- | --- |
+| Teléfono, correo, dominio, idiomas publicados, mostrar/ocultar Proyectos | `src/lib/site.ts` |
+| Todos los textos del sitio (español) | `src/dictionaries/es.ts` |
+| Textos legales (borradores) | `src/content/legal-es.ts` |
+| Proyectos y demostraciones | `src/lib/projects.ts` |
+| Colores y degradados de la marca | `src/app/globals.css` (`@theme`) |
+| Logotipo | `src/assets/logo-horizontal.png` · íconos en `src/app/icon.png` y `apple-icon.png` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Formulario de contacto
 
-## Learn More
+`POST /api/contact` valida los datos en el servidor, descarta robots (campo trampa,
+tiempo mínimo de llenado y límite por IP) y envía la solicitud por correo con
+[Resend](https://resend.com). Variables necesarias en Vercel (ver `.env.example`):
 
-To learn more about Next.js, take a look at the following resources:
+- `RESEND_API_KEY`
+- `CONTACT_TO_EMAIL` (p. ej. contacto@latina768.com)
+- `CONTACT_FROM_EMAIL` (opcional)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Sin estas variables el formulario muestra un mensaje honesto de "no disponible"
+con el teléfono y el correo. Nunca simula un envío exitoso.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Idiomas
 
-## Deploy on Vercel
+Rutas `/es/…` (y `/en/…` desde la Fase 4). Para activar inglés:
+1. Crear `src/dictionaries/en.ts` con la misma estructura que `es.ts`.
+2. Registrarlo en `src/lib/i18n.ts`.
+3. Agregar `"en"` a `locales` en `src/lib/site.ts` (aparece el selector ES / EN).
+4. Agregar las versiones en inglés de los textos legales.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## SEO
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Metadatos y Open Graph por idioma, `sitemap.xml`, `robots.txt` y datos
+estructurados (schema.org). En las URL de prueba de Vercel `robots.txt`
+bloquea la indexación; solo producción se indexa.
+
+## Infraestructura — reglas
+
+No modificar nameservers, registros MX/SPF/DKIM/DMARC de Hostinger, ni el
+subdominio `seguros.latina768.com` (GoHighLevel). El dominio principal se conecta
+solo con autorización expresa, después de revisar los registros DNS actuales.
