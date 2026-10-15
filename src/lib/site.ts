@@ -18,7 +18,7 @@ export const site = {
    * La sección Proyectos permanece oculta hasta que se apruebe su contenido.
    * Para mostrarla: cambia a true y completa src/lib/projects.ts.
    */
-  showProjects: false,
+  showProjects: true,
 } as const;
 
 /**
