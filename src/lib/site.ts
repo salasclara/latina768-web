@@ -21,6 +21,13 @@ export const site = {
   showProjects: false,
 } as const;
 
+/**
+ * Indexación en Google: solo se activa con ALLOW_INDEXING=true en Vercel,
+ * cuando latina768.com ya esté conectado (Fase 7). Mientras tanto, las URL
+ * temporales (*.vercel.app) no se indexan.
+ */
+export const allowIndexing = process.env.ALLOW_INDEXING === "true";
+
 export type Locale = (typeof site.locales)[number];
 
 export function isLocale(value: string): value is Locale {

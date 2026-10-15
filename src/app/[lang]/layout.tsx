@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getDictionary, getLocale } from "@/lib/i18n";
-import { site } from "@/lib/site";
+import { allowIndexing, site } from "@/lib/site";
 import "../globals.css";
 
 const manrope = localFont({
@@ -37,6 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { default: t.meta.title, template: `%s | ${site.name}` },
     description: t.meta.description,
     applicationName: site.name,
+    robots: { index: allowIndexing, follow: allowIndexing },
     alternates: {
       canonical: `/${locale}`,
       languages: { ...Object.fromEntries(site.locales.map((l) => [l, `/${l}`])), "x-default": `/${site.defaultLocale}` },

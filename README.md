@@ -43,8 +43,9 @@ falta una clave). Legales en `src/content/legal-es.ts` y `legal-en.ts`.
 ## SEO
 
 Metadatos y Open Graph por idioma, `sitemap.xml`, `robots.txt` y datos
-estructurados (schema.org). En las URL de prueba de Vercel `robots.txt`
-bloquea la indexación; solo producción se indexa.
+estructurados (schema.org). La indexación en Google está bloqueada
+(robots.txt + noindex) hasta configurar `ALLOW_INDEXING=true` en Vercel,
+cuando latina768.com esté conectado.
 
 ## Infraestructura — reglas
 

@@ -1,13 +1,9 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
+import { allowIndexing, site } from "@/lib/site";
 
-/**
- * En las URL de prueba de Vercel (preview) se bloquea la indexación para que
- * Google no indexe versiones temporales. Solo producción permite indexar.
- */
+/** Bloquea la indexación hasta que ALLOW_INDEXING=true (ver src/lib/site.ts). */
 export default function robots(): MetadataRoute.Robots {
-  const isProduction = process.env.VERCEL_ENV === "production";
-  if (!isProduction) {
+  if (!allowIndexing) {
     return { rules: { userAgent: "*", disallow: "/" } };
   }
   return {
