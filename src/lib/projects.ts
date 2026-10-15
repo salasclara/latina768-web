@@ -75,14 +75,14 @@ export const projects: Project[] = [
       es: [
         "Web con programas, castings abiertos y llamados a inscripción",
         "Formularios conectados al CRM para dar seguimiento a cada interesada",
-        "Sección editorial de la Revista Pasarela con contenido de moda y belleza",
-        "Herramienta con IA para curar y resumir contenido del sector",
+        "Blog «Moda · Belleza · Talento» y sección de la Revista Pasarela",
+        "Motor con IA que redacta artículos de moda y belleza y los publica solo en el blog y en Facebook",
       ],
       en: [
         "Website with programs, open castings and enrollment calls to action",
         "Forms connected to the CRM to follow up with every lead",
-        "Editorial section for Revista Pasarela with fashion and beauty content",
-        "AI tool to curate and summarize industry content",
+        "“Fashion · Beauty · Talent” blog and Revista Pasarela section",
+        "AI engine that writes fashion and beauty articles and publishes them automatically to the blog and Facebook",
       ],
     },
     image: "/proyectos/pasarela.jpg",
