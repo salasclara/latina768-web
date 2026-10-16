@@ -185,8 +185,12 @@ const es = {
 
   projects: {
     eyebrow: "Proyectos",
-    title: "Proyectos y demostraciones",
-    intro: "Soluciones desarrolladas por nuestro equipo.",
+    title: "Proyectos reales, resultados que se pueden visitar",
+    intro: "Algunos de los sistemas que hemos construido para clientes y para nuestra propia marca.",
+    kinds: { client: "Cliente", own: "Proyecto propio", lab: "Laboratorio" },
+    challengeLabel: "El reto",
+    workLabel: "Lo que hicimos",
+    visit: "Visitar sitio",
     categories: {
       web: "Desarrollo web",
       apps: "Aplicaciones",

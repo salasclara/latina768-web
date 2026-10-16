@@ -165,8 +165,12 @@ const en: Dictionary = {
 
   projects: {
     eyebrow: "Projects",
-    title: "Projects and demos",
-    intro: "Solutions built by our team.",
+    title: "Real projects you can visit",
+    intro: "Some of the systems we have built for clients and for our own brand.",
+    kinds: { client: "Client", own: "Own project", lab: "Lab" },
+    challengeLabel: "The challenge",
+    workLabel: "What we did",
+    visit: "Visit site",
     categories: {
       web: "Web development",
       apps: "Apps",
